@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+
+    <portlet>
+        <portlet-name>themes-switcher</portlet-name>
+        <icon>/img/icon.png</icon>
+        <friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+        <friendly-url-mapping>themes-switcher</friendly-url-mapping>
+        <friendly-url-routes>/themes-switcher-routes.xml</friendly-url-routes>
+        <instanceable>false</instanceable>
+        <header-portlet-css>/css/themes-switcher.css</header-portlet-css>
+        <header-portlet-css>/css/directives.css</header-portlet-css>
+        <header-portlet-javascript>/js/lib/angular.min.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/lib/ui-bootstrap-tpls-1.3.3.min.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/main.js</header-portlet-javascript>
+    </portlet>
+
+
+    <!--roles-->
+
+    <role-mapper>
+        <role-name>administrator</role-name>
+        <role-link>Administrator</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>guest</role-name>
+        <role-link>Guest</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>power-user</role-name>
+        <role-link>Power User</role-link>
+    </role-mapper>
+    <role-mapper>
+        <role-name>user</role-name>
+        <role-link>User</role-link>
+    </role-mapper>
+
+</liferay-portlet-app>

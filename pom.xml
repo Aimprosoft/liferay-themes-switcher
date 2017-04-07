@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>themes-switcher-portlet</artifactId>
+    <groupId>com.aimprosoft</groupId>
+    <version>1.0.0.0</version>
+
+    <name>themes-switcher</name>
+    <description>themes-switcher</description>
+
+    <packaging>war</packaging>
+
+    <properties>
+        <jstl.version>1.2</jstl.version>
+        <servlet.api.version>2.4</servlet.api.version>
+        <jsp-api.api.version>2.0</jsp-api.api.version>
+        <portlet.api.version>2.0</portlet.api.version>
+
+        <cglib.version>2.2</cglib.version>
+
+        <spring.version>3.0.7.RELEASE</spring.version>
+        <spring.data.version>1.0.2.RELEASE</spring.data.version>
+
+        <commons.dbcp.version>1.4</commons.dbcp.version>
+        <hibernate.entitymanager.version>4.2.8.Final</hibernate.entitymanager.version>
+
+
+        <ehcache.version>1.6.1</ehcache.version>
+        <jackson.version>1.8.5</jackson.version>
+
+        <log4j.version>1.2.16</log4j.version>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>themes-switcher</id>
+            <properties>
+                <liferay.version>6.2.4</liferay.version>
+                <liferay.maven.plugin.version>6.2.4</liferay.maven.plugin.version>
+                <liferay.dir>/media/vitaliy/SSD/Work/Liferay/liferay-themes-switcher/liferay-portal-6.2-ce-ga4</liferay.dir>
+                <liferay.tomcat.dir>${liferay.dir}/tomcat-7.0.42</liferay.tomcat.dir>
+                <liferay.auto.deploy.dir>${liferay.dir}/deploy</liferay.auto.deploy.dir>
+                <liferay.app.server.deploy.dir>${liferay.dir}/deploy</liferay.app.server.deploy.dir>
+                <liferay.app.server.lib.global.dir>${liferay.dir}/tomcat-7.0.42/lib/ext</liferay.app.server.lib.global.dir>
+                <liferay.app.server.portal.dir>${liferay.dir}/tomcat-7.0.42/webapps/ROOT/WEB-INF/lib</liferay.app.server.portal.dir>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>themes-switcher-ee</id>
+            <properties>
+                <liferay.version>6.2.4</liferay.version>
+                <liferay.maven.plugin.version>6.2.4</liferay.maven.plugin.version>
+                <liferay.dir>/media/vitaliy/SSD/Work/Liferay/liferay-themes-switcher/liferay-portal-6.2-ee-sp13</liferay.dir>
+                <liferay.tomcat.dir>${liferay.dir}/tomcat-7.0.62</liferay.tomcat.dir>
+                <liferay.auto.deploy.dir>${liferay.dir}/deploy</liferay.auto.deploy.dir>
+                <liferay.app.server.deploy.dir>${liferay.dir}/deploy</liferay.app.server.deploy.dir>
+                <liferay.app.server.lib.global.dir>${liferay.dir}/tomcat-7.0.62/lib/ext</liferay.app.server.lib.global.dir>
+                <liferay.app.server.portal.dir>${liferay.dir}/tomcat-7.0.62/webapps/ROOT/WEB-INF/lib</liferay.app.server.portal.dir>
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencies>
+
+        <!-- Liferay  Dependencies -->
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>portal-service</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>util-bridges</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>util-taglib</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>util-java</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>portal-impl</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.portlet</groupId>
+            <artifactId>portlet-api</artifactId>
+            <version>${portlet.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <!-- Servlet dependencies -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp-api.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc-portlet</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring.data.version}</version>
+        </dependency>
+
+        <!-- cglib for AOP -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- DB Connection Pool, Hibernate -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${commons.dbcp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.entitymanager.version}</version>
+        </dependency>
+
+        <!-- ehCache -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+
+        <!-- Jackson JSON Serializer -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- Logger Log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <!--<outputDirectory>${liferay.auto.deploy.dir}</outputDirectory>-->
+                    <outputDirectory>/media/vitaliy/SSD/Work/Projects/liferay-themes-swithcer/liferay-themes-switcher/deploy</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+             http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+
+
+    <portlet>
+        <portlet-name>themes-switcher</portlet-name>
+        <display-name>Themes switcher</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/themes-switcher-mvc-context.xml</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>EDIT</portlet-mode>
+        </supports>
+
+        <supported-locale>en</supported-locale>
+        <supported-locale>ru</supported-locale>
+        <supported-locale>uk</supported-locale>
+        <resource-bundle>i18n.language</resource-bundle>
+
+        <portlet-info>
+            <title>Themes switcher</title>
+            <short-title>Themes switcher</short-title>
+            <keywords>theme, color scheme, switcher</keywords>
+        </portlet-info>
+
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+
+    </portlet>
+
+</portlet-app>

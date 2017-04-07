@@ -1,0 +1,14 @@
+how to:
+
+1. Installation
+    Just deploy the war package into deploy directory or install it using control panel of the portal
+
+2. Using
+    The Themes Switcher portlet has two modes:
+
+        view mode is reachable for all users including guests. This is the interface which displays the list of
+        the themes which current user permitted to view to
+
+        edit mode is reachable for Administrator role only. It contains two tabs, first of them is called "Permissions", it
+        allows to set the users' permissions for the theme and color schemes based on its roles, the second one is called "Administration"
+        it allows to set look and feel for all users to value which is set by portal default functional

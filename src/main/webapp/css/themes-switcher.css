@@ -1,0 +1,94 @@
+.aui div.ts-container input[type=checkbox] {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+div.ts-container {
+    padding: 10px;
+}
+
+div.ts-container span {
+    vertical-align: middle;
+}
+
+div.ts-container div.ts-row {
+
+}
+
+div.ts-container div.ts-row > div.ts-column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.ts-row div.look-and-feel-list-control {
+    margin-right: 3%;
+}
+
+div.ts-container div.button-footer {
+    padding: 10px 0;
+}
+
+div.ts-container h3,
+div.ts-container table td,
+div.ts-container table th,
+div.ts-container label {
+    background-color: inherit;
+    color: inherit;
+}
+
+div.ts-container h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+div.ts-container .ts-tooltip,
+div.ts-container .ts-action-label {
+    cursor: pointer;
+}
+
+div.ts-container .ts-toggle-all-actions {
+    display: inline-block;
+    margin: 0 0 0 1em;
+    vertical-align: middle;
+    font-weight: inherit;
+}
+
+div.ts-container ul.nav.nav-tabs li:not(.active) {
+    cursor: pointer;
+}
+
+div.ts-container span.label {
+    white-space: normal;
+}
+
+
+/* animations */
+
+@keyframes ts-locker {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+div.ts-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    opacity: 0;
+    display: none;
+    background-color: white;
+    transition: opacity 1000ms ease-out;
+}
+
+div.ts-locker.ts-locked {
+    display: block;
+    z-index: 20;
+    opacity: 0.3;
+}

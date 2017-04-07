@@ -1,0 +1,190 @@
+/***************************************/
+/*          DROPDOWN
+/***************************************/
+
+.ts-dropdown-container {
+    margin-bottom: 7px;
+}
+
+.ts-dropdown-container .ts-dropdown {
+    min-width: 200px;
+}
+
+.ts-dropdown-container .ts-dropdown button {
+    text-align: left;
+    width: 100%;
+}
+
+.ts-dropdown-container .ts-dropdown.open ul {
+    min-width: 100%;
+}
+
+.ts-dropdown-container .ts-dropdown ul li {
+    cursor: pointer;
+}
+
+.ts-dropdown-container .ts-dropdown button .caret {
+    float: right;
+}
+
+.ts-dropdown-container .ts-dropdown button .dropdown-title {
+    float: left;
+}
+
+/***************************************/
+/*          MESSAGE
+/***************************************/
+
+div.ts-message-container {
+    max-height: 5em;
+}
+
+div.ts-message-container.ts-message-closed {
+    max-height: 0;
+    overflow: hidden;
+}
+
+div.ts-message-container.ts-message-closed.ts-message-fade {
+    -moz-transition: max-height .5s;
+    -ms-transition: max-height .5s;
+    -o-transition: max-height .5s;
+    -webkit-transition: max-height .5s;
+    transition: max-height .5s;
+}
+
+@keyframes ts-message {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/***************************************/
+/*          SPINNER
+/***************************************/
+
+div.ts-spinner {
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/***************************************/
+/*          SCREENSHOT
+/***************************************/
+
+ts-screenshot {
+    display: inline-block;
+}
+
+.aui .ts-screenshot img.img-polaroid {
+    max-height: 130px;
+}
+
+/***************************************/
+/*          SORTER
+/***************************************/
+
+span.ts-sorter-title {
+    text-decoration: underline;
+    font-weight: inherit;
+    cursor: pointer;
+}
+
+span.ts-sorter {
+    height: 10px;
+    width: 7px;
+    _background: url(/html/js/aui/aui-datatable-core/assets/skins/sam/sort-arrow-sprite-ie.png) no-repeat 0 0;
+    background: url(/html/js/aui/aui-datatable-core/assets/skins/sam/sort-arrow-sprite.png) no-repeat 0 0;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+span.ts-sorter-asc {
+    background-position: 0 -10px;
+}
+
+span.ts-sorter-desc {
+    background-position: 0 -20px;
+}
+
+/***************************************/
+/*          PAGINATOR
+/***************************************/
+
+.ts-pagination {
+    display: block;
+    width: 100%;
+}
+
+.ts-pagination .ts-page-config,
+.ts-pagination .ts-results-count {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0;
+}
+
+.ts-pagination .ts-pagination-buttons {
+    float: right;
+}
+
+.ts-pagination .ts-results-count {
+    margin-left: 7px;
+}
+
+.ts-pagination .ts-pagination-buttons .lfr-pagination-buttons.pager,
+.ts-pagination .ts-page-config .ts-page-number,
+.ts-pagination .ts-page-config .ts-page-size {
+    display: inline-block;
+}
+
+.ts-pagination .ts-page-config .ts-page-size {
+    float: left;
+}
+
+.ts-pagination .ts-pagination-buttons .lfr-pagination-buttons.pager {
+    margin: 0;
+}
+
+.ts-pagination.short .ts-pagination-buttons {
+    float: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.ts-pagination.short .ts-page-config,
+.ts-pagination.short .ts-page-config .ts-page-size,
+.ts-pagination.short .ts-page-config .ts-page-size button,
+.ts-pagination.short .ts-page-config .ts-page-size div.btn-group,
+.ts-pagination.short .ts-page-config .ts-page-number,
+.ts-pagination.short .ts-page-config .ts-page-number button,
+.ts-pagination.short .ts-page-config .ts-page-number div.btn-group,
+.ts-pagination.short .ts-pagination-buttons ul,
+.ts-pagination.short .ts-page-config .open ul.dropdown-menu {
+    display: block;
+    width: 100%;
+    float: none;
+}
+
+.ts-pagination.short .ts-pagination-buttons li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+/*.ts-pagination.short .ts-page-config .ts-page-size,*/
+.ts-pagination.short .ts-results-count,
+.ts-pagination.short .ts-pagination-buttons li.first,
+.ts-pagination.short .ts-pagination-buttons li.last {
+    display: none;
+}
+
+.ts-pagination.short .ts-pagination-buttons li > a {
+    line-height: 20px;
+    padding: 11px 19px;
+    width: 50%;
+}
