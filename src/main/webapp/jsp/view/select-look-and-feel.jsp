@@ -1,24 +1,27 @@
+<%--
+/**
+ * Copyright (c) 2005 - 2017 Aimprosoft. All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+--%>
+
 <%@ include file="../init.jspf" %>
 
 <script src="<c:url value="/js/plugins/directives.js"/>"></script>
 <script src="<c:url value="/js/plugins/message.js"/>"></script>
 <script src="<c:url value="/js/look-and-feel-list.js"/>"></script>
-
-<%--@elvariable id="themes" type="java.util.List<com.liferay.portal.model.Theme>"--%>
-<%--@elvariable id="themeDisplay" type="com.liferay.portal.theme.ThemeDisplay"--%>
-<%--@elvariable id="screenShotPath" type="java.lang.String"--%>
-<%--@elvariable id="colorSchemes" type="java.util.List<com.liferay.portal.model.ColorScheme>"--%>
-<%--@elvariable id="lookAndFeelBinding" type="com.aimprosoft.lfs.model.persist.LookAndFeelBinding"--%>
-
-<%--<portlet:actionURL var="resetBindingUrl">--%>
-<%--<portlet:param name="action" value="resetBinding"/>--%>
-<%--<portlet:param name="redirectURL" value="${startPage}"/>--%>
-<%--<portlet:param name="userId" value="${themeDisplay.userId}"/>--%>
-<%--<portlet:param name="groupId" value="${themeDisplay.scopeGroupId}"/>--%>
-<%--<portlet:param name="lookAndFeel.companyId" value="${themeDisplay.companyId}"/>--%>
-<%--<portlet:param name="companyId" value="${themeDisplay.companyId}"/>--%>
-<%--<portlet:param name="sessionId" value="${themeDisplay.sessionId}"/>--%>
-<%--</portlet:actionURL>--%>
 
 <portlet:resourceURL var="resetBindingUrl" id="resetBinding">
     <portlet:param name="action" value="resetBinding"/>
