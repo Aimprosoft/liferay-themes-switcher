@@ -23,8 +23,8 @@
 
         <cglib.version>2.2</cglib.version>
 
-        <spring.version>3.2.14.RELEASE</spring.version>
-        <spring.data.version>1.0.2.RELEASE</spring.data.version>
+        <spring.version>4.3.23.RELEASE</spring.version>
+        <spring.data.version>1.11.20.RELEASE</spring.data.version>
 
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <hibernate.entitymanager.version>4.2.8.Final</hibernate.entitymanager.version>
@@ -42,7 +42,7 @@
             <properties>
                 <liferay.version>6.2.4</liferay.version>
                 <liferay.maven.plugin.version>6.2.4</liferay.maven.plugin.version>
-                <liferay.dir>/media/vitaliy/SSD/Work/Liferay/liferay-themes-switcher/liferay-portal-6.2-ce-ga4</liferay.dir>
+                <liferay.dir>/home/vitaliy/Work/Liferay/themes-swither/liferay-portal-6.2-ce-ga4</liferay.dir>
                 <liferay.tomcat.dir>${liferay.dir}/tomcat-7.0.42</liferay.tomcat.dir>
                 <liferay.auto.deploy.dir>${liferay.dir}/deploy</liferay.auto.deploy.dir>
                 <liferay.app.server.deploy.dir>${liferay.dir}/deploy</liferay.app.server.deploy.dir>
@@ -132,43 +132,36 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc-portlet</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
